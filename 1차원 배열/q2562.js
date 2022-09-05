@@ -11,13 +11,6 @@ const input = fs
 let max = input[0];
 let num = 0;
 
-for (let i = 1; i < input.length; i++) {
-  if (max < input[i]) {
-    max = input[i];
-    num = i;
-  }
-}
-
 console.log(max);
 console.log(num + 1);
 
