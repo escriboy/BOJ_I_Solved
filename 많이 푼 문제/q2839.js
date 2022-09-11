@@ -20,5 +20,7 @@ if (results.length === 0) {
   answer = Math.min(...results);
 }
 
+console.log(answer);
+
 // 1) 결과값 중 i가 더 큰 것을 log한다. (어디에다 저장해두었다가 꺼내기?)
 // 2) 결과값이 나오지 않으면 -1 log한다.
