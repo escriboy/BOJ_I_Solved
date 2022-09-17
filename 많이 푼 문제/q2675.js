@@ -2,13 +2,10 @@
 // input[1]부터는 3 ABC처럼, 띄어쓰기로 나눈다. input[1], input[2], ...
 const input = require('fs').readFileSync('dev/stdin').toString().split('\n');
 
-const testNum = +input[0]; // 2
-
-// 결과값을 담을 result 변수 선언
-let result = '';
+const testCount = +input[0]; // 2
 
 // 원하는 값을 출력하는 for문을 생성한다.
-for (let i = 1; i <= testNum; i++) {
+for (let i = 1; i <= testCount; i++) {
   let result = '';
   // 1, 2
   for (let j = 0; j < input[i].split(' ')[1].length; j++) {
