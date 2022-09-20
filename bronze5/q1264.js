@@ -23,7 +23,3 @@ for (let i = 0; i < lowerText.length - 1; i++) {
   }
   console.log(count);
 }
-
-// for문을 text.length-1까지 돈다.
-// 모음을 가진 vowels 배열을 생성하고
-// 내부 for문을 돌면서 모음이 몇 개 있는지 센다. (모음 중 하나라도 있으면 => || 연산자 사용하기?)
