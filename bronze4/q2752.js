@@ -11,10 +11,3 @@ input.sort((a, b) => {
 });
 
 console.log(`${input[0]} ${input[1]} ${input[2]}`);
-
-// for (let i = 1; i < input.length; i++) {
-//   let min = input[0];
-//   if (input[0] > input[i]) {
-//     min = input[i];
-//   }
-// }
