@@ -7,26 +7,26 @@ const input = require('fs')
 const AB = input[0].split(' ').map(Number);
 const CD = input[1].split(' ').map(Number);
 
-const A = AB[0] / CD[0] + AB[1] / CD[1];
-const B = CD[0] / CD[1] + AB[0] / AB[1];
-const C = CD[1] / AB[1] + CD[0] / AB[0];
-const D = AB[1] / AB[0] + CD[1] / CD[0];
+const res1 = AB[0] / CD[0] + AB[1] / CD[1];
+const res2 = CD[0] / CD[1] + AB[0] / AB[1];
+const res3 = CD[1] / AB[1] + CD[0] / AB[0];
+const res4 = AB[1] / AB[0] + CD[1] / CD[0];
 
-const result = [A, B, C, D];
+const result = [res1, res2, res3, res4];
 
 result.sort((a, b) => b - a);
 
 switch (result[0]) {
-  case A:
+  case res1:
     console.log(0);
     break;
-  case B:
+  case res2:
     console.log(1);
     break;
-  case C:
+  case res3:
     console.log(2);
     break;
-  case D:
+  case res4:
     console.log(3);
     break;
   default:
