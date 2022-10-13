@@ -21,7 +21,7 @@ for (let i = 97; i <= 122; i++) {
 */
 
 function findeMaxChar(str) {
-  const charMap = {};
+  const charMap = [];
   let max = 0;
   let maxChar = '';
 
