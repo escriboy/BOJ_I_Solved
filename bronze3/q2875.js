@@ -18,9 +18,3 @@ for (let i = internship; i >= 0; i--) {
 }
 team.sort((a, b) => b - a);
 console.log(team[0] === undefined ? 0 : team[0]);
-
-/*
-
-문제점: 
-
-*/
