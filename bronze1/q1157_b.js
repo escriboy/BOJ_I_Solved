@@ -6,10 +6,11 @@ const input = require('fs')
 
 let answer = [];
 let alphabet = [];
+let count = 0;
 
 // 알파벳으로 이루어진 배열 생성
 for (let i = 97; i <= 122; i++) {
-  alphabet.push(String.fromCharCode(i));
+  alphabet.push(String.fromCharCode(i).toLocaleUpperCase());
 }
 
 for (let i = 0; i < input.length; i++) {
@@ -29,4 +30,10 @@ answer 배열에 각 알파벳에 해당하는 배열에 1씩 더해진다.
 3) 찾은 최대값이 어느 배열에 있는지 찾는다.
 2) 배열에 해당하는 알파벳(대문자)을 출력한다.
 
+*/
+
+/*
+1) 문자열을 toLower, toUpper 하기
+2) 문자열에 a-z, A-z가 각각 몇 개씩 있는지 => 숫자를 배열에 저장
+3) 최대값이 어딨는지 찾기
 */
