@@ -6,7 +6,7 @@ const input = require('fs')
 
 const N = input[0];
 const F = input[1];
-const newN = input[0].slice(0, -2);
+const newN = N.slice(0, -2);
 
 let i = 0;
 
