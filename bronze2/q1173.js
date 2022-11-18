@@ -9,7 +9,7 @@ let N = input[0]; // 운동하려는 시간(분)
 let m = input[1]; // 현재 맥박
 let M = input[2]; // 최대 맥박
 let T = input[3]; // 운동시 분당 증가하는 맥박
-let R = input[4]; // 운동시 분당 감소하는 맥박
+let R = input[4]; // 운동시 분당 감소하는 맥박µ
 
 const init = input[1]; // 초기맥박이자 최소맥박
 let time = 0; // 지나가는 시간
