@@ -12,11 +12,9 @@ for (let arr of cases) {
   const W = arr[1]; // 12
   const N = arr[2]; // 10
 
-  const floor = N % H;
-  const roomNumber =
-    Math.floor(N / H) + 1 < 10
-      ? '0' + (Math.floor(N / H) + 1)
-      : Math.floor(N / H) + 1;
+  const floor = N % H === 0 ? H : N % H;
+  const room = Math.floor(N % H) === 0 ? N / H : Math.floor(N / H) + 1;
+  const roomNumber = room < 10 ? '0' + room : room;
 
   console.log(+('' + floor + roomNumber));
 }
