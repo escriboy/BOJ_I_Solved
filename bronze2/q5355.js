@@ -16,11 +16,3 @@ for (const line of cases) {
   }
   console.log(result.toFixed(2));
 }
-
-// const input = ['3', '3 @ %', '10.4 # % @', '8 #'];
-/**
- * @ : x3
- * % : +5
- * # : -7
- *
- */
