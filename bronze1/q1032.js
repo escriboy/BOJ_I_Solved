@@ -5,13 +5,13 @@ const input = require('fs')
   .split('\n');
 
 let N = +input[0];
-const name = [];
+const words = [];
 
 for (let i = 1; i <= N; i++) {
-  name.push(input[i]);
+  words.push(input[i]);
 }
 
-solution(name);
+solution(words);
 
 function solution(arr) {
   let answer = [];
