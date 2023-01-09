@@ -22,14 +22,3 @@ while (yet) {
   arr = arr.slice(+arr[0] + 1);
   if (arr.length === 0) yet = false;
 }
-
-// const input = [
-//   '2',
-//   '3',
-//   '10 Iversen',
-//   '1000000 Nannskog',
-//   '2000000 Ronaldinho',
-//   '2',
-//   '1000000 Maradona',
-//   '999999 Batistuta',
-// ];
