@@ -1,53 +1,25 @@
-const input = require('fs')
+const word = require('fs')
   .readFileSync('dev/stdin')
   .toString()
   .trim()
-  .toLocaleLowerCase();
+  .toLowerCase();
 
-const alphabet = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-];
-
-let number = [];
-
-for (let i = 0; i < alphabet.length; i++) {
-  number.push(input.indexOf(alphabet[i]));
+const alphabet = new Array(26).fill(0);
+for (let i = 0; i < word.length; i++) {
+  alphabet[word.charCodeAt(i) - 97]++;
 }
-let number2 = number.slice();
-number2.sort((a, b) => b - a);
 
-console.log(number2[0]);
-console.log(number);
-const max = number.indexOf(number2[0]);
-console.log(max);
-console.log(alphabet[15]);
+const max = Math.max(...alphabet);
+const index = alphabet.indexOf(max);
 
-/*
-1) 배열 
+let isSame = false;
 
-*/
+// 최대값이 두 개 이상인지를 확인
+for (let i = 0; i < 26; i++) {
+  if (alphabet[i] === max && index !== i) {
+    isSame = true;
+    break;
+  }
+}
+
+console.log(isSame ? '?' : String.fromCharCode(index + 65));
