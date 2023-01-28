@@ -1,15 +1,31 @@
-// const input = require('fs')
-//   .readFileSync('dev/stdin')
-//   .toString()
-//   .trim()
-//   .split('\n');
+const input = require('fs')
+  .readFileSync('dev/stdin')
+  .toString()
+  .trim()
+  .split('\n');
 
-const input = ['3', '2 2', '1 5', '13 29'];
+const sites = input.slice(1);
 
-const sites = input.slice(1).map((site) => site.split(' ').map(Number));
-console.log(sites);
+const factorial = (num) => {
+  if (num === 1 || num === 0) {
+    return 1;
+  }
+  return num * factorial(num - 1);
+};
 
-/**
- * 다리르 지을 수 있는 경우의 수
- * 다리끼리는 서로 겹쳐질 수 없음 (일자로만)
- */
+const result = () => {
+  sites.forEach((el) => {
+    const numbers = el
+      .split(' ')
+      .map(Number)
+      .sort((a, b) => a - b);
+
+    const min = numbers[0];
+    const max = numbers[1];
+
+    const answer = factorial(max) / (factorial(min) * factorial(max - min));
+    console.log(parseInt(answer + 0.5));
+  });
+};
+
+result();
