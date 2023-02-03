@@ -14,10 +14,10 @@ for (const string of input) {
 for (const string of input) {
   for (let i = 0; i < maxLength; i++) {
     if (string[i]) {
-      if (resultArr[i] === undefined) {
-        resultArr[i] = string[i];
-      } else {
+      if (resultArr[i]) {
         resultArr[i] += string[i];
+      } else {
+        resultArr[i] = string[i];
       }
     }
   }
