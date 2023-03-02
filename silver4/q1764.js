@@ -27,16 +27,3 @@ const [long, short] =
 long.sort();
 const dbj = short.filter((name) => binary_search(long, name));
 console.log(dbj.length + '\n' + dbj.sort().join('\n'));
-
-// const noHear = input.slice(0, N);
-// const noSee = input.slice(N);
-//
-// const result = [];
-//
-// for (const person of noHear) {
-//   if (noSee.includes(person)) {
-//     result.push(person);
-//   }
-// }
-// result.sort();
-// console.log(result.length + '\n' + result.join('\n'));
